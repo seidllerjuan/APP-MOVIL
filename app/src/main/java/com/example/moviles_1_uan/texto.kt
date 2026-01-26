@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun MyTextView(){
 
-    val myfontColor =   Color.Magenta
+    val myfontColor =   Color.Blue
     val tamaniofuente = 80.sp
 
     Text( text = stringResource(R.string.saludo_txt),
