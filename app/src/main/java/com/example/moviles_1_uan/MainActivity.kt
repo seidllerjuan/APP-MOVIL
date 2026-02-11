@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.movil23534.componentes.Botones
 import com.example.moviles_1_uan.ui.theme.Moviles_1_uanTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,9 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Moviles_1_uanTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                     MyTextView()
-                }
+                Botones()
             }
         }
     }

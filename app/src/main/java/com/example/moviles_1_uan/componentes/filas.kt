@@ -33,7 +33,6 @@ fun Filas() {
             Text("cuatro")
             Text("cinco")
             Text("seis")
-
         }
 
         VerticalDivider()
