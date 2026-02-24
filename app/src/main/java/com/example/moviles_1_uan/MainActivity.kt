@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.movil23534.componentes.Botones
+import com.example.moviles_1_uan.listas.Listview
 import com.example.moviles_1_uan.ui.theme.Moviles_1_uanTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Moviles_1_uanTheme {
-                Botones()
+                Listview()
             }
         }
     }

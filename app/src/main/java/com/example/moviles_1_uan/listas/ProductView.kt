@@ -31,33 +31,36 @@ import com.example.moviles_1_uan.R
 @Composable
 fun ProductPreview(){
     val computadora = ProductoModel(imagens = R.drawable.baseline_surfing_24, nombre = "Iphone 17 pro max", calif = 4.8f, precio = 28779.0 , entrega = "Lunes")
-    ProductView(computadora)
+    ProductView(computadora){
+
+    }
 }
 
 //fun ProductoView(producto:Int,nombre: String, calificacion: Double,precio: Int, llegada: String) {
 
 @Composable
-fun ProductView(producto: ProductoModel) {
+fun ProductView(producto: ProductoModel, selected:()-> Unit) {
 //    var producto: Int = com.example.moviles_1_uan.R.drawable.images
 //    var nombre: String = "LA GRASA"
 //    var calificacion: Double = 4.0
 //    var precio: Int= 200
 //    var llegada: String = "Llegara"
 
-    var texto by remember {
+    var resultado by remember {
         mutableStateOf("")
     }
 
-    var activo by remember {
+    var agregado by remember {
         mutableStateOf(false)
     }
     fun cambiarTexto(){
-        if (activo){
-            texto="agregste al carro"
+        agregado = !agregado
+
+        if (agregado){
+            resultado="agregste al carro"
         } else{
-            texto=""
+            resultado=""
         }
-        activo = !activo
     }
 
     Card(modifier = Modifier.padding(17.dp), colors = CardDefaults.cardColors(
@@ -83,6 +86,7 @@ fun ProductView(producto: ProductoModel) {
                     Button(
                         onClick = {
                             cambiarTexto()
+                            selected()
 
                         }, colors = ButtonDefaults.buttonColors(
                             contentColor = Color(0xFF000000),
@@ -98,5 +102,5 @@ fun ProductView(producto: ProductoModel) {
             }
         }
     }
-
+    Text( resultado)
 }
