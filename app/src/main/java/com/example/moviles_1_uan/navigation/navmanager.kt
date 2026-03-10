@@ -21,6 +21,8 @@ object Home
 @Serializable
 object Report
 
+@Serializable
+data class ReportManager(val numeroSeccion: Int, val nombreEncargado: String, val nombreSeccion: String)
 @Preview(showBackground = true)
 @Composable
 fun NavManager() {
@@ -33,6 +35,8 @@ fun NavManager() {
         composable<Report> {
             ReportView(navController)
         }
+
+        composable<ReportManager> { PDFView() }
     }
 }
 
