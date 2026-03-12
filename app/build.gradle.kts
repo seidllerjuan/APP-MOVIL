@@ -62,4 +62,6 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.9.7")
 //    implementation(libs.androidx.navigation.compose)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
 }
