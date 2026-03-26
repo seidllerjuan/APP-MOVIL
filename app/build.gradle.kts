@@ -63,5 +63,5 @@ dependencies {
 //    implementation(libs.androidx.navigation.compose)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
-
+    implementation("androidx.datastore:datastore-preferences:1.1.2")
 }
